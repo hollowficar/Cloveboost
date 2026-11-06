@@ -1,1 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #090711;
+    color: #f5f1ff;
+    line-height: 1.6;
+}
+
+.topo {
+    width: 100%;
+    padding: 12px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: #100b1b;
+    border-bottom: 1px solid #40205c;
+}
+
+.marca img {
+    width: 115px;
+    height: 58px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+nav a {
+    color: #f5f1ff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #d45cff;
+}
+
+.inicio {
+    min-height: 430px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 55px 8%;
+    overflow: hidden;
+    background: linear-gradient(90deg, rgba(8, 6, 16, 0.96), rgba(8, 6, 16, 0.72), rgba(8, 6, 16, 0.25));
+}
+
+.banner {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+}
+
+.texto-inicio {
+    max-width: 540px;
+}
+
+.chamada {
+    color: #48e7ff;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-size: clamp(32px, 5vw, 55px);
+    line-height: 1.1;
+    margin-bottom: 18px;
+}
+
+h1 span {
+    color: #d34cff;
+}
+
+.texto-inicio > p:not(.chamada) {
+    max-width: 490px;
+    color: #ded8e9;
+    margin-bottom: 25px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 12px 20px;
+    color: white;
+    background: linear-gradient(100deg, #9c22e8, #3bcdf2);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.botao:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.15);
+}
+
+.sobre, .precos, .loja, .contato {
+    padding: 65px 8%;
+    text-align: center;
+}
+
+.sobre h2, .precos h2, .loja h2, .contato h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.sobre > p, .subtitulo, .contato > p {
+    color: #c5bdd3;
+    max-width: 700px;
+    margin: 0 auto 28px;
+}
+
+.passos {
+    display: flex;
+    gap: 18px;
+    margin-top: 35px;
+}
+
+.passo {
+    flex: 1;
+    padding: 25px 20px;
+    text-align: left;
+    background: #151020;
+    border: 1px solid #3d2056;
+    border-radius: 8px;
+}
+
+.passo span {
+    color: #48e7ff;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.passo h3 {
+    margin: 8px 0;
+    color: #e6b5ff;
+}
+
+.passo p {
+    color: #c5bdd3;
+    font-size: 14px;
+}
+
+.precos {
+    background: #100b1b;
+    border-top: 1px solid #28163a;
+    border-bottom: 1px solid #28163a;
+}
+
+.imagem-precos {
+    max-width: 620px;
+    margin: 25px auto 15px;
+    padding: 10px;
+    background: #080610;
+    border: 1px solid #58217a;
+    border-radius: 8px;
+    box-shadow: 0 0 25px rgba(174, 43, 255, 0.15);
+}
+
+.imagem-precos img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.aviso {
+    color: #c5bdd3;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+.loja {
+    background: #090711;
+}
+
+.pacotes-vp {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 18px;
+    max-width: 1000px;
+    margin: 30px auto 0;
+}
+
+.pacote-vp {
+    padding: 25px 20px;
+    background: #151020;
+    border: 1px solid #3d2056;
+    border-radius: 8px;
+}
+
+.quantidade-vp {
+    display: block;
+    color: #e6b5ff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.preco-vp {
+    margin: 8px 0 18px;
+    color: #48e7ff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.pacote-vp .botao {
+    padding: 9px 14px;
+}
+
+.contato {
+    background: radial-gradient(circle at top, #241036, #090711 65%);
+}
+
+.botoes-contato {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.botao-secundario {
+    background: transparent;
+    border: 1px solid #47dff5;
+    color: #72edff;
+}
+
+.nota-contato {
+    margin-top: 18px !important;
+    font-size: 12px;
+}
+
+footer {
+    padding: 22px 7%;
+    text-align: center;
+    background: #06050a;
+    color: #8d849b;
+    font-size: 12px;
+}
+
+.gateway {
+    padding: 70px 8%;
+    text-align: center;
+    background: #0d0915;
+}
+
+.gateway h2 {
+    margin-bottom: 24px;
+    font-size: clamp(28px, 4vw, 42px);
+}
+
+.gateway-opcoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.gateway-opcoes .botao {
+    min-width: 180px;
+}
+
+@media (max-width: 700px) {
+    .topo {
+        flex-direction: column;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .inicio {
+        min-height: 390px;
+        padding: 45px 7%;
+        background: linear-gradient(90deg, rgba(8, 6, 16, 0.95), rgba(8, 6, 16, 0.68));
+    }
+
+    .passos {
+        flex-direction: column;
+    }
+
+    .sobre, .precos, .loja, .contato {
+        padding: 48px 6%;
+    }
+}
 
