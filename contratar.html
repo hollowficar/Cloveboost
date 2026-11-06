@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contratar Elo Job | Clove Boost</title>
+<link rel="stylesheet" href="css/contratar.css">
+<script src="js/contratar.js"></script>
+</head>
+<body class="pagina-contratar">
+    <header class="topo">
+        <a href="index.html#inicio" class="marca">
+            <img src="imagens/logo-clove.png" alt="Logo Clove Boost">
+        </a>
+        <nav>
+            <a href="index.html#sobre">Como funciona</a>
+            <a href="index.html#precos">Preços</a>
+            <a href="contratar.html" aria-current="page">Contratar Elo Job</a>
+            <a href="loja.html">Loja de VP</a>
+            <a href="index.html#contato">Contato</a>
+        </nav>
+    </header>
+
+    <main class="pagina-pedido">
+        <section class="cabecalho-pedido">
+            <p class="chamada">CLOVE BOOST · VALORANT</p>
+            <h1>Contrate seu <span>Elo Job</span></h1>
+            <p>Conte seu elo atual e até onde quer chegar. Vamos confirmar o valor, o prazo e os detalhes antes de fechar o serviço.</p>
+        </section>
+
+        <div class="colunas-pedido">
+            <form class="formulario-pedido" id="formulario-pedido">
+                <h2>Monte sua solicitação</h2>
+                <p class="instrucao-pedido">Preencha os dados para preparar seu pedido. Nenhuma senha é solicitada.</p>
+
+                <div class="campos-pedido">
+                    <label>
+                        Seu nome ou apelido
+                        <input name="nome" type="text" autocomplete="name" placeholder="Como podemos te chamar?" required>
+                    </label>
+
+                    <label>
+                        Elo atual
+                        <select name="eloAtual" id="elo-atual" required>
+                            <option value="" selected disabled>Selecione seu elo atual</option>
+                            <option value="0">Sem rank</option>
+                            <option value="1">Ferro I</option>
+                            <option value="2">Ferro II</option>
+                            <option value="3">Ferro III</option>
+                            <option value="4">Bronze I</option>
+                            <option value="5">Bronze II</option>
+                            <option value="6">Bronze III</option>
+                            <option value="7">Prata I</option>
+                            <option value="8">Prata II</option>
+                            <option value="9">Prata III</option>
+                            <option value="10">Ouro I</option>
+                            <option value="11">Ouro II</option>
+                            <option value="12">Ouro III</option>
+                            <option value="13">Platina I</option>
+                            <option value="14">Platina II</option>
+                            <option value="15">Platina III</option>
+                            <option value="16">Diamante I</option>
+                            <option value="17">Diamante II</option>
+                            <option value="18">Diamante III</option>
+                            <option value="19">Ascendente I</option>
+                            <option value="20">Ascendente II</option>
+                            <option value="21">Ascendente III</option>
+                            <option value="22">Imortal</option>
+                            <option value="23">Radiante</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Elo desejado
+                        <select name="eloDesejado" id="elo-desejado" required>
+                            <option value="" selected disabled>Selecione seu objetivo</option>
+                            <option value="1">Ferro I</option>
+                            <option value="2">Ferro II</option>
+                            <option value="3">Ferro III</option>
+                            <option value="4">Bronze I</option>
+                            <option value="5">Bronze II</option>
+                            <option value="6">Bronze III</option>
+                            <option value="7">Prata I</option>
+                            <option value="8">Prata II</option>
+                            <option value="9">Prata III</option>
+                            <option value="10">Ouro I</option>
+                            <option value="11">Ouro II</option>
+                            <option value="12">Ouro III</option>
+                            <option value="13">Platina I</option>
+                            <option value="14">Platina II</option>
+                            <option value="15">Platina III</option>
+                            <option value="16">Diamante I</option>
+                            <option value="17">Diamante II</option>
+                            <option value="18">Diamante III</option>
+                            <option value="19">Ascendente I</option>
+                            <option value="20">Ascendente II</option>
+                            <option value="21">Ascendente III</option>
+                            <option value="22">Imortal</option>
+                            <option value="23">Radiante</option>
+                        </select>
+                    </label>
+
+                    <label class="campo-completo">
+                        Seu contato (Discord ou WhatsApp)
+                        <input name="contato" type="text" autocomplete="off" placeholder="Ex.: usuario#0000 ou (00) 00000-0000" required>
+                    </label>
+
+                    <label class="campo-completo">
+                        Observações <span>(opcional)</span>
+                        <textarea name="observacoes" rows="3" placeholder="Conte algum detalhe que devemos saber"></textarea>
+                    </label>
+                </div>
+
+                <p class="erro-pedido" id="erro-pedido" role="alert"></p>
+                <div class="estimativa-pedido" aria-live="polite">
+                    <span>Estimativa do Elo Job</span>
+                    <strong id="estimativa-valor">Selecione seus elos</strong>
+                    <p id="estimativa-detalhe">O valor é calculado por divisão, conforme a tabela.</p>
+                </div>
+                <button class="botao botao-enviar" type="submit">Preparar solicitação</button>
+                <p class="aviso-seguranca">Nunca envie sua senha. O valor e as condições serão combinados com você antes de confirmar.</p>
+            </form>
+
+            <aside class="resumo-elo" aria-live="polite">
+                <h2>Resumo do serviço</h2>
+                <p id="resumo-pedido">Escolha seu elo atual e o elo desejado para ver a estimativa.</p>
+                <div class="precos-elo">
+                    <h3>Valores por divisão</h3>
+                    <img src="imagens/tabela-precos.png" alt="Tabela de preços do Elo Job por divisão">
+                    <p>A estimativa soma cada divisão subida, usando o preço da divisão alcançada. Imortal+ é negociável e precisa ser confirmado pelo contato.</p>
+                </div>
+                <div class="acoes-pedido" id="acoes-pedido" hidden>
+                    <h3>Solicitação preparada</h3>
+                    <p>Entre em contato e envie os dados do resumo para combinar os próximos passos.</p>
+                    <a class="botao" href="index.html#contato">Ir para contato</a>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Clove Boost · Projeto independente de fãs de VALORANT.</p>
+        <p>VALORANT é uma marca de seus respectivos proprietários. Este site não é afiliado à Riot Games.</p>
+    </footer>
+</body>
+</html>
