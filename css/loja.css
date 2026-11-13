@@ -18,7 +18,7 @@
     padding: 28px 7% 55px;
     background:
         linear-gradient(180deg, rgba(8, 6, 16, 0.45), #090711 230px),
-        url("imagens/banner-clove.png") center top / 100% 230px no-repeat,
+       url("../imagens/banner-clove.png") center top / 100% 230px no-repeat,
         #090711;
 }
 
