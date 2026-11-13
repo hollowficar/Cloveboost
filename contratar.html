@@ -1,18 +1,26 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Solicite seu Elo Job na Clove Boost.">
     <title>Contratar Elo Job | Clove Boost</title>
-<link rel="stylesheet" href="css/contratar.css">
-<script src="js/contratar.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contratar.css">
+    <script src="js/contratar.js" defer></script>
 </head>
+
 <body class="pagina-contratar">
+
     <header class="topo">
-        <a href="index.html#inicio" class="marca">
+        <a href="index.html" class="marca">
             <img src="imagens/logo-clove.png" alt="Logo Clove Boost">
         </a>
+
         <nav>
+            <a href="index.html#inicio">Início</a>
             <a href="index.html#sobre">Como funciona</a>
             <a href="index.html#precos">Preços</a>
             <a href="contratar.html" aria-current="page">Contratar Elo Job</a>
@@ -22,125 +30,223 @@
     </header>
 
     <main class="pagina-pedido">
+
         <section class="cabecalho-pedido">
-            <p class="chamada">CLOVE BOOST · VALORANT</p>
-            <h1>Contrate seu <span>Elo Job</span></h1>
-            <p>Conte seu elo atual e até onde quer chegar. Vamos confirmar o valor, o prazo e os detalhes antes de fechar o serviço.</p>
+            <p class="chamada">CLOVE BOOST</p>
+
+            <h1>
+                Solicite seu <span>Elo Job</span>
+            </h1>
+
+            <p>
+                Preencha as informações abaixo para calcular
+                uma estimativa do seu pedido.
+            </p>
         </section>
 
         <div class="colunas-pedido">
-            <form class="formulario-pedido" id="formulario-pedido">
-                <h2>Monte sua solicitação</h2>
-                <p class="instrucao-pedido">Preencha os dados para preparar seu pedido. Nenhuma senha é solicitada.</p>
 
-                <div class="campos-pedido">
-                    <label>
-                        Seu nome ou apelido
-                        <input name="nome" type="text" autocomplete="name" placeholder="Como podemos te chamar?" required>
-                    </label>
+            <section class="formulario-pedido">
+                <h2>Dados da solicitação</h2>
 
-                    <label>
-                        Elo atual
-                        <select name="eloAtual" id="elo-atual" required>
-                            <option value="" selected disabled>Selecione seu elo atual</option>
-                            <option value="0">Sem rank</option>
-                            <option value="1">Ferro I</option>
-                            <option value="2">Ferro II</option>
-                            <option value="3">Ferro III</option>
-                            <option value="4">Bronze I</option>
-                            <option value="5">Bronze II</option>
-                            <option value="6">Bronze III</option>
-                            <option value="7">Prata I</option>
-                            <option value="8">Prata II</option>
-                            <option value="9">Prata III</option>
-                            <option value="10">Ouro I</option>
-                            <option value="11">Ouro II</option>
-                            <option value="12">Ouro III</option>
-                            <option value="13">Platina I</option>
-                            <option value="14">Platina II</option>
-                            <option value="15">Platina III</option>
-                            <option value="16">Diamante I</option>
-                            <option value="17">Diamante II</option>
-                            <option value="18">Diamante III</option>
-                            <option value="19">Ascendente I</option>
-                            <option value="20">Ascendente II</option>
-                            <option value="21">Ascendente III</option>
-                            <option value="22">Imortal</option>
-                            <option value="23">Radiante</option>
-                        </select>
-                    </label>
+                <p class="instrucao-pedido">
+                    Informe seus dados e selecione os elos desejados.
+                </p>
 
-                    <label>
-                        Elo desejado
-                        <select name="eloDesejado" id="elo-desejado" required>
-                            <option value="" selected disabled>Selecione seu objetivo</option>
-                            <option value="1">Ferro I</option>
-                            <option value="2">Ferro II</option>
-                            <option value="3">Ferro III</option>
-                            <option value="4">Bronze I</option>
-                            <option value="5">Bronze II</option>
-                            <option value="6">Bronze III</option>
-                            <option value="7">Prata I</option>
-                            <option value="8">Prata II</option>
-                            <option value="9">Prata III</option>
-                            <option value="10">Ouro I</option>
-                            <option value="11">Ouro II</option>
-                            <option value="12">Ouro III</option>
-                            <option value="13">Platina I</option>
-                            <option value="14">Platina II</option>
-                            <option value="15">Platina III</option>
-                            <option value="16">Diamante I</option>
-                            <option value="17">Diamante II</option>
-                            <option value="18">Diamante III</option>
-                            <option value="19">Ascendente I</option>
-                            <option value="20">Ascendente II</option>
-                            <option value="21">Ascendente III</option>
-                            <option value="22">Imortal</option>
-                            <option value="23">Radiante</option>
-                        </select>
-                    </label>
+                <form id="formulario-pedido">
 
-                    <label class="campo-completo">
-                        Seu contato (Discord ou WhatsApp)
-                        <input name="contato" type="text" autocomplete="off" placeholder="Ex.: usuario#0000 ou (00) 00000-0000" required>
-                    </label>
+                    <div class="campos-pedido">
 
-                    <label class="campo-completo">
-                        Observações <span>(opcional)</span>
-                        <textarea name="observacoes" rows="3" placeholder="Conte algum detalhe que devemos saber"></textarea>
-                    </label>
-                </div>
+                        <label>
+                            Nome
+                            <input
+                                type="text"
+                                name="nome"
+                                placeholder="Seu nome"
+                                required
+                            >
+                        </label>
 
-                <p class="erro-pedido" id="erro-pedido" role="alert"></p>
-                <div class="estimativa-pedido" aria-live="polite">
-                    <span>Estimativa do Elo Job</span>
-                    <strong id="estimativa-valor">Selecione seus elos</strong>
-                    <p id="estimativa-detalhe">O valor é calculado por divisão, conforme a tabela.</p>
-                </div>
-                <button class="botao botao-enviar" type="submit">Preparar solicitação</button>
-                <p class="aviso-seguranca">Nunca envie sua senha. O valor e as condições serão combinados com você antes de confirmar.</p>
-            </form>
+                        <label>
+                            Contato
+                            <input
+                                type="text"
+                                name="contato"
+                                placeholder="Discord ou WhatsApp"
+                                required
+                            >
+                        </label>
 
-            <aside class="resumo-elo" aria-live="polite">
+                        <label>
+                            Elo atual
+                            <select id="elo-atual" name="elo-atual" required>
+                                <option value="" selected disabled>
+                                    Selecione seu elo
+                                </option>
+
+                                <option value="1">Ferro 1</option>
+                                <option value="2">Ferro 2</option>
+                                <option value="3">Ferro 3</option>
+
+                                <option value="4">Bronze 1</option>
+                                <option value="5">Bronze 2</option>
+                                <option value="6">Bronze 3</option>
+
+                                <option value="7">Prata 1</option>
+                                <option value="8">Prata 2</option>
+                                <option value="9">Prata 3</option>
+
+                                <option value="10">Ouro 1</option>
+                                <option value="11">Ouro 2</option>
+                                <option value="12">Ouro 3</option>
+
+                                <option value="13">Platina 1</option>
+                                <option value="14">Platina 2</option>
+                                <option value="15">Platina 3</option>
+
+                                <option value="16">Diamante 1</option>
+                                <option value="17">Diamante 2</option>
+                                <option value="18">Diamante 3</option>
+
+                                <option value="19">Ascendente 1</option>
+                                <option value="20">Ascendente 2</option>
+                                <option value="21">Ascendente 3</option>
+
+                                <option value="22">Imortal</option>
+                                <option value="23">Radiante</option>
+                            </select>
+                        </label>
+
+                        <label>
+                            Elo desejado
+                            <select id="elo-desejado" name="elo-desejado" required>
+                                <option value="" selected disabled>
+                                    Selecione o elo desejado
+                                </option>
+
+                                <option value="1">Ferro 1</option>
+                                <option value="2">Ferro 2</option>
+                                <option value="3">Ferro 3</option>
+
+                                <option value="4">Bronze 1</option>
+                                <option value="5">Bronze 2</option>
+                                <option value="6">Bronze 3</option>
+
+                                <option value="7">Prata 1</option>
+                                <option value="8">Prata 2</option>
+                                <option value="9">Prata 3</option>
+
+                                <option value="10">Ouro 1</option>
+                                <option value="11">Ouro 2</option>
+                                <option value="12">Ouro 3</option>
+
+                                <option value="13">Platina 1</option>
+                                <option value="14">Platina 2</option>
+                                <option value="15">Platina 3</option>
+
+                                <option value="16">Diamante 1</option>
+                                <option value="17">Diamante 2</option>
+                                <option value="18">Diamante 3</option>
+
+                                <option value="19">Ascendente 1</option>
+                                <option value="20">Ascendente 2</option>
+                                <option value="21">Ascendente 3</option>
+
+                                <option value="22">Imortal</option>
+                                <option value="23">Radiante</option>
+                            </select>
+                        </label>
+
+                        <label class="campo-completo">
+                            Observações
+                            <textarea
+                                name="observacoes"
+                                rows="4"
+                                placeholder="Informações adicionais (opcional)"
+                            ></textarea>
+                        </label>
+
+                    </div>
+
+                    <p
+                        id="erro-pedido"
+                        class="erro-pedido"
+                        role="alert"
+                    ></p>
+
+                    <div class="estimativa-pedido">
+                        <span>Estimativa do pedido</span>
+
+                        <strong id="estimativa-valor">
+                            Selecione seus elos
+                        </strong>
+
+                        <p id="estimativa-detalhe">
+                            O valor é calculado por divisão, conforme a tabela.
+                        </p>
+                    </div>
+
+                    <button type="submit" class="botao botao-enviar">
+                        Gerar solicitação
+                    </button>
+
+                    <p class="aviso-seguranca">
+                        O envio deste formulário apenas prepara
+                        os dados da solicitação. Não realiza pagamentos.
+                    </p>
+
+                </form>
+            </section>
+
+            <aside class="resumo-elo">
+
                 <h2>Resumo do serviço</h2>
-                <p id="resumo-pedido">Escolha seu elo atual e o elo desejado para ver a estimativa.</p>
+
+                <p>
+                    Confira os dados da sua solicitação após preencher
+                    o formulário.
+                </p>
+
                 <div class="precos-elo">
-                    <h3>Valores por divisão</h3>
-                    <img src="imagens/tabela-precos.png" alt="Tabela de preços do Elo Job por divisão">
-                    <p>A estimativa soma cada divisão subida, usando o preço da divisão alcançada. Imortal+ é negociável e precisa ser confirmado pelo contato.</p>
+                    <h3>Tabela de preços</h3>
+
+                    <img
+                        src="imagens/tabela-precos.png"
+                        alt="Tabela de preços do Elo Job"
+                    >
+
+                    <p>
+                        Os valores são estimativas e podem variar
+                        conforme o elo solicitado.
+                    </p>
                 </div>
-                <div class="acoes-pedido" id="acoes-pedido" hidden>
+
+                <div id="acoes-pedido" class="acoes-pedido" hidden>
                     <h3>Solicitação preparada</h3>
-                    <p>Entre em contato e envie os dados do resumo para combinar os próximos passos.</p>
-                    <a class="botao" href="index.html#contato">Ir para contato</a>
+
+                    <p id="resumo-pedido"></p>
+
+                    <p>
+                        Revise os dados antes de entrar em contato
+                        para confirmar o orçamento.
+                    </p>
+
+                    <a href="index.html#contato" class="botao">
+                        Voltar ao contato
+                    </a>
                 </div>
+
             </aside>
+
         </div>
+
     </main>
 
     <footer>
-        <p>© 2026 Clove Boost · Projeto independente de fãs de VALORANT.</p>
-        <p>VALORANT é uma marca de seus respectivos proprietários. Este site não é afiliado à Riot Games.</p>
+        <p>
+            &copy; 2026 Clove Boost. Todos os direitos reservados.
+        </p>
     </footer>
+
 </body>
 </html>
