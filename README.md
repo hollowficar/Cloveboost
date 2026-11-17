@@ -22,7 +22,7 @@ Uma plataforma web de serviços relacionados ao VALORANT. Um projeto front-end q
 
 > **REPOSITÓRIO OFICIAL • CLOVEBOOST**
 >
-> Desenvolvido e mantido por Ícaro Haruki.
+> Desenvolvido e mantido por HRK e Satz
 
 </div>
 
