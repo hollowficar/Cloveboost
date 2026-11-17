@@ -134,7 +134,7 @@ Também busca desenvolver habilidades de organização de projetos e utilizaçã
 
 <div align="center">
 
-**Desenvolvido por Ícaro Haruki**
+**Desenvolvido por HRK e Satz**
 
 Projeto independente de fãs de VALORANT.
 
